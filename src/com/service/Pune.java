@@ -1,16 +1,13 @@
 package com.service;
-import java.util.Scanner;
+import java.util.*;
 import com.model.Vehicle;
-public class Pune implements Rto{
+public class Pune implements Rto {
 	Scanner sc=new Scanner(System.in);
-	//int en;
-	/*public void entry(int n)
-	{
-		en=n;
-		System.out.println(en);
-	}*/
 	
-	Vehicle v[]=new Vehicle[2];
+	
+	
+	
+	Vehicle v[]=new Vehicle[1];
 	
 	//int i=0;
 	int count=1;
@@ -19,8 +16,8 @@ public class Pune implements Rto{
 	
 	public Vehicle[] regVehicle()
 	{
-		
-		//Vehicle v[]=new Vehicle[1];
+		try{
+		//Vehicle v[]=new Vehicle[n];
 		for(int i=0;i<v.length;i++)
 		{
 			Vehicle v1=new Vehicle();
@@ -52,6 +49,10 @@ public class Pune implements Rto{
 		}
 		
 		return v;
+         }catch(Exception e)
+            {
+                  System.out.println("invalid input")
+            }
 	}
 	@Override
 	public void updateVehicle()
@@ -100,7 +101,5 @@ public class Pune implements Rto{
 		}
 	}
 	
-	
- }
 
-
+}
